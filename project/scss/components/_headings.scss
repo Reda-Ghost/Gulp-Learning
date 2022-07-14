@@ -1,0 +1,27 @@
+.title-with-border {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	position: relative;
+	h2 {
+		text-align: center;
+		width: max-content;
+		padding: 8px 50px;
+		background-color: $mainColor;
+		font-size: 22px;
+		font-weight: normal;
+		@include radius(10px);
+		margin: 0 auto;
+		color: white;
+		text-transform: capitalize;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			height: 1px;
+			background-color: $mainColor;
+			width: 100%;
+			z-index: -1;
+		}
+	}
+}

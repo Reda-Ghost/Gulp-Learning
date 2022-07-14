@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    include includes/style
+    include includes/mixins
+    block title
+      title Pug Learning Course
+
+  body
+    block pageContent
+      .header
+      +list
+      .container
+      +list 
+      .footer
+      +features('i hate back end')
+      +features('i love front end')
+
+  footer 
+    .container 
+      - var friends = 8
+      case friends 
+        when 0
+        when 1
+        when 2
+        when 3
+        when 4: p few friends
+        default
+          p you have #{friends} friends
+
+  |
+  |
+  |
+  |  
+  include includes/scripts

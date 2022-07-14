@@ -1,0 +1,154 @@
+// start Footer
+.footer {
+	background-color: #f5f5f5;
+	padding-block: 50px;
+	.grid-footer {
+		display: flex;
+		@media #{$maxMedium} {
+			flex-wrap: wrap;
+		}
+		@media #{$maxSmall} {
+			flex-direction: column;
+		}
+		.blog {
+			width: 50%;
+			padding-right: 30px;
+			@media #{$maxMedium} {
+				width: 100%;
+			}
+			@media #{$maxSmall} {
+				width: 100%;
+			}
+			@media #{$maxMobile} {
+				padding-right: 0;
+			}
+			.blog-content {
+				display: flex;
+				align-items: center;
+				@media #{$maxMobile} {
+					flex-direction: column;
+				}
+				&:first-of-type {
+					margin-bottom: 40px;
+					margin-top: 50px;
+				}
+				img {
+					flex: 0.8;
+					max-width: 100%;
+					height: 100px;
+					padding: 3px;
+					margin-right: 20px;
+					border: 2px solid white;
+					object-fit: cover;
+					@media #{$maxMobile} {
+						margin-right: 0;
+					}
+				}
+				.content {
+					flex: 2;
+					@media #{$maxMobile} {
+						padding: 20px;
+					}
+					h4 {
+						color: $mainColor;
+						margin-top: 0;
+						margin-bottom: 0;
+						line-height: 1.5;
+					}
+					p {
+						font-size: 15px;
+						line-height: 1.6;
+						opacity: 0.9;
+						@media #{$maxSmall} {
+							& {
+								font-size: 13px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.company {
+			width: 25%;
+			@media #{$maxMedium} {
+				width: 50%;
+			}
+			@media #{$maxSmall} {
+				width: 100%;
+				margin-top: 50px;
+				text-align: center;
+			}
+			.info {
+				margin-top: 50px;
+				list-style: none;
+				padding-left: 0;
+				@media #{$maxSmall} {
+					margin-top: 40px;
+				}
+				li {
+					margin-bottom: 20px;
+					font-size: 16px;
+					opacity: 0.95;
+				}
+			}
+			h5 {
+				font-size: 15px;
+				margin-top: 50px;
+				color: $mainColor;
+				opacity: 0.95;
+				margin-bottom: 0;
+				@media #{$maxSmall} {
+					margin-top: 20px;
+				}
+			}
+			p {
+				opacity: 0.95;
+				line-height: 1.6;
+				font-size: 14px;
+			}
+		}
+		.contact {
+			width: 25%;
+			@media #{$maxMedium} {
+				width: 50%;
+			}
+			@media #{$maxSmall} {
+				width: 100%;
+				margin-top: 35px;
+			}
+			form {
+				margin-top: 50px;
+				@media #{$maxSmall} {
+					margin-top: 35px;
+				}
+				.input-style,
+				textarea {
+					width: 100%;
+					margin-bottom: 15px;
+					padding: 12px 20px;
+					border: 1px solid transparent;
+					border-bottom: 1px solid $mainColor;
+					@include transition();
+					outline: none;
+					&:hover {
+						border: 1px solid $mainColor;
+					}
+				}
+				textarea {
+					height: 150px;
+					resize: none;
+				}
+			}
+		}
+	}
+}
+
+h3 {
+	color: $mainColor;
+	font-size: 22px;
+	text-transform: capitalize;
+	@media #{$maxSmall} {
+		text-align: center;
+	}
+}
+// end Footer

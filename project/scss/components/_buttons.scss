@@ -1,0 +1,20 @@
+.main-btn {
+	padding: 8px 25px;
+	font: 20px bold;
+	text-transform: uppercase;
+	min-width: 150px;
+	cursor: pointer;
+	text-align: center;
+	background-color: rgba($mainColor, 0.85);
+	color: white;
+	border: none;
+	@include transition();
+	@include radius(5px);
+	&:hover {
+		background-color: $mainColor;
+	}
+	@media #{$maxSmall} {
+		width: 100%;
+		padding: 10px 25px;
+	}
+}
